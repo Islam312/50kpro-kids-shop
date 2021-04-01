@@ -33,6 +33,10 @@ a {
   list-style: none;
   display: flex;
 }
+.left-side li:last-child,
+.right-side li:last-child {
+  border-right: 0;
+}
 .left-side {
   float: left;
 }
@@ -40,7 +44,12 @@ a {
   float: right;
 }
 .top-header ul li {
-  padding: 15px 10px;
+  padding: 5px 20px;
+  margin: 10px 0;
+  border-right: 1px solid #aaaaaa;
+}
+.top-header ul li i {
+  margin-right: 10px;
 }
 .top-header a {
   color: #4c4b6c;
@@ -57,34 +66,54 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 93%;
+  width: 95%;
 }
 .services-info {
   display: flex;
+  margin-top: 20px;
 }
-.services-info div {
-  padding: 0 40px;
+.services-info > div {
+  padding: 0 35px;
   border-right: 1px solid #aaaaaa;
+  display: inline-flex;
+  align-items: center;
 }
-.services-info div:last-child {
+.services-info > div:last-child {
   border: 0;
 }
-.services-info div > span {
-  display: block;
-}
-.services-info div > span:first-child {
-  font-weight: bold;
+.services-info h4 {
+  font-weight: 500;
   color: steelblue;
 }
-.services-info div > span:last-child {
-  color: #aaaaaa;
+.services-info p {
+  color: #999999;
 }
-.work-day span span {
-  color: rgb(206, 13, 13);
+.work-day span {
+  color: #e53556;
 }
-.discounts span span {
-  color: gold;
+.discounts span {
+  color: #ffcc33;
 }
-.questions span span {
-  color: skyblue;
+.questions span {
+  color: #7cd0f5;
+}
+
+.icons-group {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  color: #336;
+  margin-right: 10px;
+}
+.icons-group i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.icons-group.revers-icon {
+  transform: scaleX(-1);
 }
