@@ -1,11 +1,11 @@
 /**================= BASE STYLE ===============*/
 /** *(звездочка) - для выбора всех элементов сайта*/
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 /** container - для позицирования контента сайта 
 **по середине 
@@ -20,7 +20,9 @@
 a {
   text-decoration: none;
 }
-
+ul {
+  list-style: none;
+}
 /**================= TOP HEADER ==================*/
 .top-header {
   background: #f7f7f7;
@@ -47,6 +49,12 @@ a {
   padding: 5px 20px;
   margin: 10px 0;
   border-right: 1px solid #aaaaaa;
+}
+.top-header .left-side li:first-child {
+  padding-left: 0;
+}
+.top-header .right-side li:last-child {
+  padding-right: 0;
 }
 .top-header ul li i {
   margin-right: 10px;
@@ -102,7 +110,6 @@ a {
   position: relative;
   width: 45px;
   height: 45px;
-  font-size: 20px;
   background: #f4f4f4;
   border-radius: 50%;
   color: #336;
@@ -113,7 +120,74 @@ a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  font-size: 20px;
 }
 .icons-group.revers-icon {
   transform: scaleX(-1);
+}
+
+/**============== bottom header =============*/
+/**items link*/
+.bottom-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #f7f7f7;
+  height: 65px;
+}
+.bottom-header .left-side > li {
+  position: relative;
+  margin-right: 5px;
+  padding: 10px 30px;
+  font-size: 18px;
+  color: #336;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+.bottom-header__dropdown {
+  position: absolute;
+}
+.bottom-header .left-side > li:hover {
+  color: #fff;
+  background: #7cd0f5;
+  border-radius: 30px;
+}
+/** search */
+.search-header {
+  display: flex;
+  padding: 5px 30px;
+  background: #fff;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+.search-header input[type='text'] {
+  outline: 0;
+  border: 0;
+  width: 220px;
+}
+.search-header button {
+  border: 0;
+  background: #fff;
+  cursor: pointer;
+  padding-left: 30px;
+}
+.search-header button i {
+  font-size: 20px;
+}
+/** Price */
+.basket {
+  display: flex;
+  align-items: center;
+}
+.basket .icons-group {
+  background: #fc3;
+  color: #fff;
+}
+.basket__price {
+  font-weight: bold;
+}
+.basket__price span {
+  color: #999999;
+  font-weight: normal;
 }
