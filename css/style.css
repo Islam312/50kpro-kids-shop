@@ -2,7 +2,6 @@
 /** *(звездочка) - для выбора всех элементов сайта*/
 * {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -13,8 +12,9 @@
 */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1260px;
   margin: 0 auto;
+  padding: 0 30px;
 }
 /** a - тег, задаем стили для всех ссылок*/
 a {
@@ -29,6 +29,7 @@ ul {
   display: inline-block;
   width: 100%;
   color: #4c4b6c;
+  font-size: 16px;
 }
 .left-side,
 .right-side {
@@ -145,20 +146,16 @@ ul {
   color: #336;
   font-weight: bold;
   cursor: pointer;
-  transition: .2s ease-in;
+  transition: 0.2s ease-in;
 }
-
+.bottom-header .left-side:first-child {
+  margin-left: -30px;
+}
 .bottom-header .left-side > li:hover .first-lvl-link {
   color: #fff;
   background: #7cd0f5;
   border-radius: 30px;
 }
-
-/* .bottom-header .left-side .first-lvl-link:hover {
-  color: #fff;
-  background: #7cd0f5;
-  border-radius: 30px;
-} */
 
 /**dropdown*/
 .dropdown {
@@ -170,12 +167,12 @@ ul {
   padding: 20px;
   line-height: 2;
 }
-.dropdown-list{
+.dropdown-list {
   opacity: 0;
   position: absolute;
   padding-top: 50px;
   visibility: hidden;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
   display: flex;
 }
 .bottom-header .left-side li:hover .dropdown-list {
@@ -223,4 +220,144 @@ ul {
 .basket__price span {
   color: #999999;
   font-weight: normal;
+}
+
+/**============MAIN BLOCK===============*/
+/**featured products*/
+/** title  featured*/
+.title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #f4f4f4;
+}
+.title {
+  font-size: 32px;
+  color: #4c4b6c;
+  font-weight: 500;
+}
+.view-all {
+  font-size: 14px;
+  color: #2b2b2b;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.view-all span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #4c4b6c;
+  border-radius: 50%;
+  margin-left: 10px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.view-all i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: 6px 5px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(-45deg);
+}
+.view-all:hover {
+  color: #7cd0f5;
+}
+.view-all:hover span {
+  background-color: #7cd0f5;
+}
+
+/** List product of featured*/
+
+.products-featured .product {
+  width: 210px;
+  overflow: hidden;
+}
+.product .product__stars,
+.product .hidden-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-product {
+  display: flex;
+  margin-top: 30px;
+}
+.product img {
+  width: 90%;
+}
+.product__body {
+  font-family: roboto;
+  font-size: 14px;
+  margin: 20px 0 30px;
+  position: relative;
+}
+.product__body > div {
+  line-height: 1.5;
+}
+.product .product__title {
+  font-family: roboto;
+  font-weight: 400;
+  color: #4c4b6c;
+  text-transform: capitalize;
+}
+
+.product .stars {
+  display: flex;
+  color: gold;
+}
+.product .reviews {
+  font-size: 12px;
+  color: #888895;
+  font-weight: 100;
+  margin-right: 30px;
+}
+.product__price span {
+  color: #4c4b6c;
+  font-size: 18px;
+  font-family: arial;
+  font-weight: 600;
+  margin-right: 20px;
+}
+.product__price del {
+  color: #999;
+}
+.product .hidden-btns {
+  position: absolute;
+}
+.product .hidden-btns a {
+  display: block;
+}
+.product .hidden-btns li {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.product .hidden-btns li {
+  transition: 0.5s;
+}
+.product .hidden-btns li:first-child {
+  transition: 0.3s;
+}
+.product .hidden-btns li:last-child {
+  transition: 0.7s;
+}
+.product .icons-group {
+  transition: 0.5s;
+}
+/***fetured hovers*/
+.product:hover .product__stars {
+  display: none;
+}
+.product:hover .hidden-btns li {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0%);
+}
+.product .icons-group:hover {
+  background-color: #7cd0f5;
+  color: #fff;
 }
