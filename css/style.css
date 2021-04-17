@@ -6,6 +6,9 @@
   padding: 0;
   margin: 0;
 }
+body {
+  line-height: 1;
+}
 /** container - для позицирования контента сайта 
 **по середине 
 **в определых рамках
@@ -20,8 +23,15 @@
 a {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: none;
+}
+p {
+  margin: 5px;
+}
 ul {
   list-style: none;
+  margin: 0;
 }
 /**================= TOP HEADER ==================*/
 .top-header {
@@ -123,7 +133,8 @@ ul {
   transform: translate(-50%, -50%);
   font-size: 20px;
 }
-.icons-group.revers-icon {
+.revers-icon {
+  display: inline-block;
   transform: scaleX(-1);
 }
 
@@ -360,4 +371,50 @@ ul {
 .product .icons-group:hover {
   background-color: #7cd0f5;
   color: #fff;
+}
+/**footer*/
+.footer {
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer a,
+.footer__list {
+  color: #999999;
+}
+.footer .premium-link {
+  color: #2b2b2b;
+}
+.footer-img-logo {
+  margin-bottom: 10px;
+}
+.footer .title-nav {
+  position: relative;
+  margin-top: 20px;
+  padding: 20px 0;
+  font-size: 24px;
+  color: #333366;
+  font-weight: 600;
+}
+.footer .title-nav:after{
+  position: absolute;
+  content: '';
+  width: 40px;
+  background: #f3f3f3;
+  top: 90%;
+  left: 0;
+  height: 5px;
+}
+.footer__list {
+  margin-top: 30px;
+}
+.contact span {
+  line-height: 1.5;
+}
+.list-info__link {
+  display: inline-block;
+  padding: 10px 0;
+  transition: 0.5s;
+}
+.list-info__link:hover {
+  transform: translateX(20px);
 }
