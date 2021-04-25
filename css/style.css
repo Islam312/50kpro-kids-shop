@@ -88,6 +88,9 @@ ul {
   justify-content: space-between;
   width: 95%;
 }
+.middle-wrap a {
+  display: block;
+}
 .services-info {
   display: flex;
   margin-top: 20px;
@@ -285,7 +288,7 @@ ul {
 /** List product of featured*/
 
 .products-featured .product {
-  width: 220px;
+  max-width: 220px;
   overflow: hidden;
 }
 .product .product__stars,
@@ -465,7 +468,92 @@ ul {
 .bottom-footer {
   padding: 30px 0;
 }
-.was-maked  span{
+.was-maked span {
   font-weight: bold;
   color: #336;
+}
+
+/** мобильная адаптация */
+/** MAX-WIDTH: 1200px*/
+@media (max-width: 1200px) {
+  .list-product {
+    /* flex-wrap: wrap; */
+  }
+  .product {
+    width: 100%;
+    margin: 0 5px;
+  }
+  .list-instagram {
+    justify-content: start;
+  }
+  .services-info > div {
+    padding: 0 20px;
+  }
+  .first-lvl-link {
+    padding: 10px 15px;
+  }
+}
+/** MAX-WIDTH: 1024px*/
+@media (max-width: 1024px) {
+  .middle-wrap {
+    display: block;
+  }
+  .middle-wrap a {
+    margin: 0 auto;
+  }
+  .middle-wrap .main-logo {
+    display: block;
+    margin: 0 auto;
+  }
+  .services-info h4 {
+    font-size: large;
+  }
+  .services-info {
+    justify-content: center;
+    /* flex-direction: column; */
+  }
+  .services-info > div {
+    border: 0;
+    margin-bottom: 5px;
+  }
+  .bottom-header .right-side {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .bottom-header .search-header {
+    margin: 0 0 10px auto;
+  }
+  .bottom-header .search-header input[type='text'] {
+    width: 100px;
+  }
+  .bottom-header .basket {
+    justify-content: flex-end;
+  }
+  .list-product {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .top-header ul li {
+    padding: 3px 13px;
+    margin: 5px 0;
+    font-size: 14px;
+  }
+}
+/** MAX-WIDTH: 789px*/
+@media (max-width: 789px) {
+  .top-header .left-side,
+  .top-header .right-side {
+    display: flex;
+    flex-direction: column;
+  }
+  .top-header ul li {
+    border: 0;
+    padding-left: 0;
+  }
+}
+@media(max-width: 768px){}
+@media (min-width: 320px) {
+  /* .bottom-header .left-side {
+    display: none;
+  } */
 }
