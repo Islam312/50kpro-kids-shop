@@ -538,6 +538,9 @@ ul {
     margin: 5px 0;
     font-size: 14px;
   }
+  .bottom-header .left-side {
+    margin-top: 20px;
+  }
 }
 /** MAX-WIDTH: 789px*/
 @media (max-width: 789px) {
@@ -551,7 +554,15 @@ ul {
     padding-left: 0;
   }
 }
-@media(max-width: 768px){}
+/** MAX-wIDTH: 768px */
+@media (max-width: 768px) {
+  .bottom-header .left-side{
+    display: none;
+  }
+  .bottom-header .right-side .search-header{
+    display: none;
+  }
+}
 @media (min-width: 320px) {
   /* .bottom-header .left-side {
     display: none;
